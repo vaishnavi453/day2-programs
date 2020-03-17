@@ -1,0 +1,87 @@
+public class Intersection {
+
+	@SuppressWarnings("static-access")
+
+	public static void main(String[] args) {
+
+		Intersection is=new Intersection(); //creating object
+
+		is.inter(); // calling method
+
+	}
+
+
+
+	public static void inter() {
+
+		java.util.Scanner in = new java.util.Scanner(System.in);  //scanner class
+
+		System.out.println("Enter the size of arrays:");  
+
+		int number = in.nextInt();  // taking number of array elements present in the array
+
+		int[] a = new int[number];  // array initialization for first array
+
+		int[] b = new int[number];  // array initialization for second array
+
+		int[] c = new int[number];  // array initialization for intersection array
+
+		int count = 0; 
+
+		System.out.println("Enter 1st array elements");
+
+		for (int i = 0; i < number; i++)  // Assigning 1st array elements 
+
+		{
+
+			 a[i] = in.nextInt(); //Storing the elements
+
+		}
+
+		System.out.println("Enter 2nd array elements");
+
+		for (int j = 0; j < number; j++) // Assigning 2nd array elements 
+
+		{
+
+			b[j] = in.nextInt();  // storing the elements 
+
+		}
+
+		for (int i = 0; i < number ; i++) // for loop for intersection elements
+
+		{
+
+			for (int j = 0; j <= number - 1; j++)  // it will check one element of 1st array with all the elements in another array 
+
+			{
+
+				if (a[i] == b[j]) //condition for checking the element is equal or not
+
+				{
+
+					c[count] = a[i]; //if it is equal the element stored in intersection array 
+
+					count++; 
+
+				}
+
+			}
+
+		}
+
+		System.out.println("Intersection array is : ");
+
+		for (int k = 0; k < count; k++) //  printing the intersection elements
+
+		{
+
+			System.out.println(c[k]);  // printing elements
+
+		}
+
+		in.close();	//closing scanner class 
+
+	}
+
+}

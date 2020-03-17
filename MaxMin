@@ -1,0 +1,85 @@
+
+public class MaxMin {
+
+
+
+	public static void main(String[] args) {
+
+			  System.out.println("Enter the length of the array :");
+			  
+			  java.util.Scanner in = new java.util.Scanner(System.in);  // Scanner class
+
+			  int length = in.nextInt();  // takes array size
+
+			  int [] array = new int[length];  // initializing array size
+
+			  System.out.println("Enter the elements of the array:");
+
+			  for(int i=0; i<length; i++ ) // reading array elements
+
+			  {
+
+
+		         array[i] = in.nextInt();
+
+		      }
+
+			  int max = getMax(array);  // calling max method
+
+			  int min = getMin(array);  // calling min method
+
+			  System.out.println("Max = " + max + " & " + "Min= " + min);  // printing maximum and minimum value
+
+			  in.close(); // closing scanner class
+
+	}
+
+	public static int getMax(int[] inputArray)  // calculating maximum value method
+
+	{
+
+		int maxValue = inputArray[0];
+
+		for (int i = 0; i < inputArray.length; i++) 
+
+		{
+
+			if (inputArray[i] > maxValue) // checking maximum value in the array
+
+			{
+
+				maxValue = inputArray[i];  // storing the maximum value
+
+			}
+
+		}
+
+			return maxValue;  // returns the maximum value
+
+		}
+
+
+
+		public static int getMin(int[] inputArray) {  // minimum value method
+
+			int minValue = inputArray[0];
+
+			for (int i = 0; i < inputArray.length; i++) 
+
+			{
+
+				if (inputArray[i] < minValue)  // checking minimum value in the array 
+
+				{
+
+					minValue = inputArray[i];  // storing minimum value
+
+				}
+
+			}
+
+			return minValue;  // returns minimum value
+
+	}
+
+}
